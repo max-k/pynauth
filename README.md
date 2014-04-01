@@ -1,4 +1,5 @@
 pynauth
 =======
 
-Simple Python web application based on Flask to do IMAP/POP authentication for nginx proxies.
+Simple Python app based on Flask to do LDAP auth for nginx IMAP/POP/SMTP proxies.
+
