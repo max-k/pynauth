@@ -77,14 +77,15 @@ def internal_server_error(e):
 # SMTP Exceptions logger
 
 if not app.debug:
-    import logging
-    from logging.handlers import SMTPHandler
-    mail_handler = SMTPHandler(SMTP_RELAY,
-                               SMTP_SENDER,
-                               ADMINS,
-                               'Internal server error.')
-    mail_handler.setLevel(logging.ERROR)
-    app.logger.addHandler(mail_handler)
+    if ADMINS != []:
+        import logging
+        from logging.handlers import SMTPHandler
+        mail_handler = SMTPHandler(SMTP_RELAY,
+                                   SMTP_SENDER,
+                                   ADMINS,
+                                   'Internal server error.')
+        mail_handler.setLevel(logging.ERROR)
+        app.logger.addHandler(mail_handler)
 
 # Main route
 
