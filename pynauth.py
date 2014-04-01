@@ -1,6 +1,15 @@
 #! /usr/bin/env python
 # -*- coding: utf8 -*-
 
+#
+# pynauth : LDAP Authentication module for
+# nginx POP/IMAP/SMTP proxy
+#
+# author : Thomas Sarboni <max-k@post.com>
+#
+# licence : GPLv3
+#
+
 # modules import
 
 import sys, re, math, ldap
