@@ -7,6 +7,8 @@
 #
 # author : Thomas Sarboni <max-k@post.com>
 #
+# source : https://github.com/max-k/pynauth
+#
 # licence : GPLv3
 #
 
@@ -44,13 +46,13 @@ DEFAULT_PORTS = {'imap':144,
 
 # Admins wich wants to receive mail notifications
 # Notifications disabled if empty
-ADMINS = ['admin1@example.com', 'admin2@example.com']
+ADMINS = []
 
 # SMTP server to relay noptifications to
-SMTP_RELAY = "smtp.example.com"
+SMTP_RELAY = ""
 
 # Sender of notification emails
-SMTP_SENDER = "mail_auth@example.com"
+SMTP_SENDER = ""
 
 # Flask Init
 
