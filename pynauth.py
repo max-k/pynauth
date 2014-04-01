@@ -19,7 +19,7 @@ from werkzeug.exceptions import BadRequest
 # Base configuration
 
 # LDAP server URI
-LDAP_URI = "ldap://172.16.21.86"
+LDAP_URI = "ldap://127.0.0.1"
 
 # Base DN of the LDAP search
 # You can use %d flag to insert user mailbox domain
@@ -163,7 +163,7 @@ def endpoint():
             host_ip = LDAP_URI.split('//')[1]
 
         status = 'OK'
-        headers["Auth-Server"] = "172.16.21.88" #host_ip
+        headers["Auth-Server"] = host_ip
         headers["Auth-Port"] = port
 
     headers["Auth-Wait"] = check_attempt(attempt)
